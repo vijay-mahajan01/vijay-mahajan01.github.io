@@ -1,1 +1,1 @@
-# Vijay_Mahajan.github.io
+# VijayMahajan.github.io
