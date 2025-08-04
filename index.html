@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vijay Mahajan | Computational Chemist Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -26,18 +27,6 @@
       color: white;
       text-align: center;
       padding: 50px 20px;
-      animation: fadeInDown 1s ease-out;
-    }
-
-    @keyframes fadeInDown {
-      from {
-        opacity: 0;
-        transform: translateY(-20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
     }
 
     .hero-content {
@@ -93,22 +82,10 @@
       border-radius: 15px;
       box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease;
-      animation: fadeInUp 1s ease;
     }
 
-    section:nth-child(even) {
+    section:nth-of-type(even) {
       background: #f0f9ff;
-    }
-
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
     }
 
     section:hover {
@@ -139,6 +116,9 @@
       margin-top: 20px;
       display: flex;
       justify-content: center;
+      width: 100%;
+      max-height: 400px;
+      overflow: hidden;
     }
 
     iframe {
@@ -159,7 +139,7 @@
 </head>
 
 <body>
-  <header class="hero">
+  <header class="hero" data-aos="fade-down">
     <div class="hero-content">
       <img src="profile.jpg" alt="Vijay Mahajan" class="profile-img">
       <h1>Vijay Mahajan</h1>
@@ -177,15 +157,15 @@
     </ul>
   </nav>
 
-  <section id="about">
+  <section id="about" data-aos="fade-up">
     <h2>About Me</h2>
     <p>I am a Master's graduate in Chemistry with experience in synthetic and computational chemistry. My research journey started with an internship at IIT Palakkad focusing on mechanistic investigations using DFT. Currently, I work as a Research Chemist, while upskilling in Python and machine learning to explore computational approaches in drug and material discovery.</p>
     <div class="three-d-container">
-      <iframe src="https://embed.molview.org/v1/?mode=balls&cid=2244"></iframe>
+      <iframe src="https://embed.molview.org/v1/?mode=balls&cid=2244" loading="lazy" title="3D Molecule"></iframe>
     </div>
   </section>
 
-  <section id="experience">
+  <section id="experience" data-aos="fade-up">
     <h2>Experience</h2>
     <ul>
       <li><strong>Research Chemist</strong> – 1 year of experience in synthetic route development, reaction optimization, impurity profiling.</li>
@@ -193,7 +173,7 @@
     </ul>
   </section>
 
-  <section id="skills">
+  <section id="skills" data-aos="fade-up">
     <h2>Skills & Interests</h2>
     <ul>
       <li>Computational Chemistry Tools: ORCA, Gaussian, Avogadro</li>
@@ -204,7 +184,7 @@
     </ul>
   </section>
 
-  <section id="projects">
+  <section id="projects" data-aos="fade-up">
     <h2>Projects</h2>
     <ul>
       <li><strong>DFT Analysis of Organometallic Reactions</strong> – IIT Palakkad</li>
@@ -212,7 +192,7 @@
     </ul>
   </section>
 
-  <section id="contact">
+  <section id="contact" data-aos="fade-up">
     <h2>Contact</h2>
     <p>Email: vijaymahajan2405@gmail.com</p>
     <p>GitHub: <a href="https://github.com/yourgithub">github.com/yourgithub</a></p>
@@ -222,6 +202,11 @@
   <footer>
     <p>&copy; 2025 Vijay Mahajan. Built with HTML, CSS, and passion for Chemistry 🚀</p>
   </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true });
+  </script>
 </body>
 
 </html>
