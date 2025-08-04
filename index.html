@@ -5,22 +5,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vijay Mahajan | Computational Chemist</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/three@0.150.1/build/three.min.js"></script>
   <style>
     :root {
-      --bg: #f9fbfe;
-      --text: #1a1a1a;
-      --accent: #2a5298;
-      --header: #0f2027;
-    }
-
-    [data-theme="dark"] {
-      --bg: #0f2027;
-      --text: #eee;
-      --accent: #4facfe;
-      --header: #203a43;
+      --bg: #0e0e0e;
+      --text: #e0e0e0;
+      --accent: #00bcd4;
+      --header: #1a1a1a;
+      --card: #1f1f1f;
     }
 
     * {
@@ -51,13 +44,10 @@
     }
 
     header.hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), 
-              url('banner.jpg') no-repeat center center/cover;
-    ...
-   }
-
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+        url('banner.jpg') no-repeat center center/cover;
       text-align: center;
-      padding: 90px 20px 120px;
+      padding: 100px 20px 140px;
       position: relative;
     }
 
@@ -85,6 +75,7 @@
 
     .hero p {
       font-size: 1.3rem;
+      font-family: 'JetBrains Mono', monospace;
     }
 
     .resume-btn {
@@ -100,15 +91,16 @@
     }
 
     .resume-btn:hover {
-      background: var(--header);
+      background: var(--text);
+      color: var(--bg);
     }
 
     nav {
       position: sticky;
       top: 0;
-      background-color: var(--bg);
+      background-color: var(--card);
       padding: 15px 0;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
       z-index: 1000;
     }
 
@@ -133,10 +125,10 @@
     section {
       max-width: 1000px;
       margin: 60px auto;
-      background: var(--bg);
+      background: var(--card);
       padding: 50px;
       border-radius: 15px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
       opacity: 0;
       transform: translateY(40px);
     }
@@ -147,10 +139,6 @@
       transition: all 0.6s ease-in-out;
     }
 
-    section:nth-of-type(even) {
-      background: rgba(90, 154, 255, 0.05);
-    }
-
     section h2 {
       font-size: 1.8rem;
       margin-bottom: 20px;
@@ -159,9 +147,14 @@
       padding-bottom: 5px;
     }
 
+    ul li {
+      line-height: 1.8;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
     .three-d-container iframe {
       width: 100%;
-      height: 400px;
+      height: 300px;
       border: none;
       border-radius: 10px;
     }
@@ -204,9 +197,6 @@
   <section id="about">
     <h2>About Me</h2>
     <p>I am a Master's graduate in Chemistry with experience in synthetic and computational chemistry. My research journey started with an internship at IIT Palakkad focusing on mechanistic investigations using DFT. Currently, I work as a Research Chemist, while upskilling in Python and machine learning to explore computational approaches in drug and material discovery.</p>
-    <div class="three-d-container">
-      <iframe src="https://embed.molview.org/v1/?mode=balls&cid=2244" title="3D Molecule"></iframe>
-    </div>
   </section>
 
   <section id="experience">
@@ -215,9 +205,6 @@
       <li><strong>Research Chemist</strong> – 1 year of experience in synthetic route development, reaction optimization, impurity profiling.</li>
       <li><strong>Intern – IIT Palakkad</strong> – Worked on mechanistic investigations using ORCA, Gaussian, and Avogadro.</li>
     </ul>
-    <div class="three-d-container">
-      <iframe src="https://embed.molview.org/v1/?mode=sticks&cid=6322" title="3D Catalyst"></iframe>
-    </div>
   </section>
 
   <section id="skills">
@@ -229,9 +216,6 @@
       <li>Drug Discovery, Molecular Docking, MD Simulations</li>
       <li>Cheminformatics, Quantum Chemistry</li>
     </ul>
-    <div class="three-d-container">
-      <iframe src="https://embed.molview.org/v1/?mode=lines&cid=702" title="Material Example"></iframe>
-    </div>
   </section>
 
   <section id="projects">
